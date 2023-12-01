@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "irsans";
+    src: local("irsans"),
+     url("./../fonts/irsans.ttf") format("truetype");
+    font-weight: bold;
+  
+    }
+  

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "irsans";
+    src: local("irsans"),
+     url("./../../Mobile/fonts/irsans.ttf") format("truetype");
+    font-weight: bold;
+    }
+
+body,html{
+    padding: 0;
+    margin: 0;
+  }
+
+.fixedbutton {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    right: 0px;
+    
+}
+
+.Header{
+
+    height: 45px;
+    width: 100%;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    0px 0px 5px rgba(201, 201, 201, 0.12);
+    padding: 0px;
+    margin: 0px;
+    background-color: #e0e0e0;
+    padding-top: 8px;
+ 
+ 
+}
+
+ 
+ .ant-drawer-close  {
+  margin-left: -20px;
+  
+ }
+
+
+                        .BoxShadow{
+                            box-shadow: 
+                                                    -10px -10px 15px rgba(221, 221, 221, 0.5),
+                                                    3px 3px 5px rgba(167, 167, 167, 0.12);
+                        }
+
+ 
+.alice-carousel{
+ 
+ 
+ 
+  direction: rtl;
+ 
+}
+
+.alice-carousel__stage-item{
+
+    min-width: 120px;
+}
+
+
+ 
+
+ 

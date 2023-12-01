@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "irsans";
+    src: local("irsans"),
+     url("./../../fonts/irsans.ttf") format("truetype");
+    font-weight: bold;
+    }
+   
+    .BoxShadow{
+        box-shadow: 
+                                -10px -10px 15px rgba(221, 221, 221, 0.5),
+                                3px 3px 5px rgba(167, 167, 167, 0.12);
+    }

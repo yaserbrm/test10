@@ -1,0 +1,10 @@
+.circle
+{
+  width:100px;
+  height:100px;
+  -webkit-box-shadow: 1px 1px 40px 0px rgba(158,158,158,0.1); 
+   box-shadow: 1px 1px 40px 0px rgba(158,158,158,0.1);
+  border-radius:100%;
+}
+
+ 

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "irsans";
+  src: local("irsans"),
+   url("./../fonts/irsans.ttf") format("truetype");
+  font-weight: bold;
+  }
+
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:  center;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: 'irsans';
+    
+  }
+
+  .StyleActiveCode{
+    position: relative;
+    display: inline-flex;
+    width: 96%;
+    height: 40px;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-radius: 6px;
+    padding-left: 10px;
+    
+   
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      appearance: none;
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  
+  input[type=number] {
+      -moz-appearance:textfield; /* Firefox */
+  }
+
+
