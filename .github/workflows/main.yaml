@@ -1,0 +1,49 @@
+name: ci/cd
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       -
+         name: Checkout
+         uses: actions/checkout@v3
+       -
+         name: Login to Docker Hub
+         uses: docker/login-action@v3
+         with:
+           username: ${{ secrets.DOCKERHUB_USERNAME }}
+           password: ${{ secrets.DOCKERHUB_TOKEN }}
+       -
+         name: Set up Docker Buildx
+         uses: docker/setup-buildx-action@v2
+       -
+         name: Build and push
+         uses: docker/build-push-action@v4
+         with:
+           context: .
+           file: ./Dockerfile
+           push: true
+           tags: ${{ secrets.DOCKERHUB_USERNAME }}/mainproject:latest   
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: appleboy/ssh-action@master
+      name: Docker-Compose Remote Deployment
+      with:
+        host: 192.168.1.8
+        port: 22
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+           cd /root/test10 &&
+           docker compose pull &&
+           docker compose up -d"
