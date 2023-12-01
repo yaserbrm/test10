@@ -43,11 +43,11 @@ jobs:
         port: 22
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-           ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY root@192.168.1.8 "
-           cd /root/test &&
-           docker compose pull &&
-           docker compose up -d"
+        # script: |
+        #    ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY root@192.168.1.8 "
+        #    cd /root/test &&
+        #    docker compose pull &&
+        #    docker compose up -d"
 
         
            # cd /root/test10 &&    
